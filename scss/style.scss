@@ -1,0 +1,202 @@
+@import "nullstyle.scss";
+@import "common.scss";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+//-----------------------------------------------------------------------------
+
+//First block-----------------------------------------------------------------------------
+
+.awesome {
+	text-align: center;
+	padding-bottom: 40px;
+
+	&__title {}
+
+	&__subtitle {}
+
+	&__row {
+		display: flex;
+		margin: 0 -25px;
+	}
+
+	&__column {
+		padding: 0 15px 20px 15px;
+	}
+
+	&__item {
+		text-align: center;
+		width: 370px;
+	}
+
+	&__icon {
+		border-radius: 50%;
+		border: 1px solid #EC7979;
+		width: 92px;
+		height: 92px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	&__item-title {
+		font-family: "Open Sans", sans-serif;
+		font-weight: 700;
+		font-size: 24px;
+		padding: 75px 0 45px 0;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 21px;
+
+		span {
+			display: block;
+		}
+	}
+}
+
+//Second block-----------------------------------------------------------------------------
+
+.pricing {
+	text-align: center;
+	background: #F5F5F5;
+	padding: 50px 0 60px 0;
+
+	&__title {}
+
+	&__subtitle {}
+
+	&__row {
+		display: flex;
+		margin: 0 -15px;
+	}
+
+	&__column {
+
+		padding: 0 15px 20px 15px;
+
+		&_up {
+			margin: -20px 0 0 0;
+			filter: drop-shadow(0px 4px 10px rgba(51, 51, 51, 0.2));
+		}
+	}
+
+	&__item {
+		text-align: center;
+		width: 370px;
+	}
+
+	&__tariff {
+		font-family: 'Open Sans';
+		font-weight: 700;
+		font-size: 24px;
+		background: #333333;
+		color: #ffffff;
+		border: 2px solid #F5F5F5;
+		padding: 20px 0;
+	}
+
+	&__sum {
+		font-weight: 700;
+		font-size: 36px;
+		background: #333333;
+		color: #ffffff;
+		border: 2px solid #F5F5F5;
+		padding: 30px 0;
+	}
+
+	&__description {
+		font-size: 18px;
+		background: #333333;
+		color: rgba(255, 255, 255, 0.5);
+		border: 2px solid #F5F5F5;
+		padding: 17px 0;
+	}
+
+	&__gb {
+		p {
+			font-size: 18px;
+			padding: 17px 0;
+			color: #86878B;
+			background: #ffffff;
+			border: 2px solid #F5F5F5;
+		}
+	}
+}
+
+//Third block-----------------------------------------------------------------------------
+
+.review {
+	text-align: center;
+	padding: 50px 0 64px 0;
+
+	&__title {}
+
+	&__subtitle {}
+
+	&__row {
+		display: flex;
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+	}
+
+	&__item {
+		width: 370px;
+	}
+
+	&__text {
+		background: #E2E2E2;
+		border-radius: 10px;
+		color: #86878B;
+		font-size: 18px;
+		padding: 37px 0;
+		margin: 0 0 66px 0;
+		position: relative;
+
+		span {
+			display: block;
+		}
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-top: 30px solid #E2E2E2;
+			position: absolute;
+			left: 15%;
+			bottom: -20px;
+		}
+	}
+
+	&__person {
+		display: flex;
+
+
+	}
+
+	&__image {
+		padding-right: 30px;
+	}
+
+	&__about-person {}
+
+	&__name {
+		font-family: 'Open Sans';
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 33px;
+		padding-bottom: 30px;
+
+	}
+
+	&__profession {
+		font-size: 18px;
+		text-align: left;
+	}
+}
