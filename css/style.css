@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -119,6 +119,44 @@ body {
   padding: 40px 0 110px 0;
   color: #86878B;
   font-size: 18px;
+}
+
+.header {
+  background-color: #000000;
+}
+.header__container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navigation {
+  text-transform: capitalize;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  height: 100%;
+}
+.header__navigation nav {
+  display: flex;
+}
+.header__navigation a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 113px;
+  height: 75px;
+  color: #FFFFFF;
+}
+.header__navigation a:hover {
+  background-color: #EC7979;
+}
+.header__navigation a:active {
+  background-color: #AB4949;
 }
 
 .awesome {
