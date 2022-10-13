@@ -30,3 +30,34 @@ body {
   color: #86878B;
   font-size: 18px;
 }
+
+.btn {
+  border: 2px solid #FFFFFF;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+.btn:hover {
+  border: 2px solid #EC7979;
+  transition: all 0.3s;
+}
+.btn:active {
+  background: #AB4949;
+  border: 2px solid #AB4949;
+  transition: all 0.3s;
+}
+.btn a {
+  color: #ffffff;
+  padding: 15px 100px;
+}
+.btn a:hover {
+  color: #EC7979;
+  transition: all 0.3s;
+}
+.btn a:active {
+  color: #ffffff;
+  transition: all 0.3s;
+}
