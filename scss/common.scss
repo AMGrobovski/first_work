@@ -15,6 +15,7 @@ body {
 	position: relative;
 
 
+
 	&::after {
 		content: '';
 		position: absolute;
@@ -33,4 +34,41 @@ body {
 	padding: 40px 0 110px 0;
 	color: #86878B;
 	font-size: 18px;
+
+}
+
+.btn {
+	border: 2px solid #FFFFFF;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 25px;
+
+	&:hover {
+		border: 2px solid #EC7979;
+		transition: all 0.3s;
+	}
+
+	&:active {
+		background: #AB4949;
+		border: 2px solid #AB4949;
+		transition: all 0.3s;
+	}
+
+	a {
+		color: #ffffff;
+		padding: 15px 100px;
+
+		&:hover {
+			color: #EC7979;
+			transition: all 0.3s;
+		}
+
+		&:active {
+			color: #ffffff;
+			transition: all 0.3s;
+		}
+	}
 }
