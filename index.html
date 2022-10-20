@@ -5,18 +5,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Awesome</title>
+	<title>AXIT</title>
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 
 <body>
 	<header class="header">
-		<div class="header__container">
+		<div class="container">
 			<div class="header__row">
 				<div class="header__logo">
 					<img src="img/logo.svg" alt="">
 				</div>
 				<div class="header__navigation">
-					<nav>
+					<nav class="header__navigation">
 						<a href="#">features</a>
 						<a href="#">About</a>
 						<a href="#">Pricing</a>
@@ -38,7 +39,7 @@
 						<h1>MODERN AXURE TEMPLATE <br>FOR BEAUTIFUL <br>PROTOTYPES</h1>
 					</div>
 					<div class="main__text">Lorem ipsum dolor sit amet, <br>consectetur adipiscing elit</div>
-					<div class="main__button btn">
+					<div class="main__button btn-a">
 						<a href="#">Download</a>
 					</div>
 				</div>
@@ -49,7 +50,7 @@
 						<input type="email" placeholder="Email">
 						<input type="password" placeholder="Password">
 					</fieldset>
-					<button>Get Started</button>
+					<button class="button">Get Started</button>
 				</form>
 			</div>
 		</div>
@@ -62,7 +63,7 @@
 					<p class="social__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
 						Aenean euismod bibendum laoreet.</p>
 				</div>
-				<div class="social__icons">
+				<div class="social__icons icons">
 					<div class="social__item">
 						<a href="">
 							<img src="img/icon_1.svg" alt="">
@@ -102,6 +103,83 @@
 			</div>
 		</div>
 	</section>
+	<div class="tabs">
+		<div class="container">
+			<div class="tab">
+				<input type="radio" id="tab1" name="tab-group" checked>
+				<label for="tab1" class="tab-title">Вкладка 1</label>
+				<section class="tab-content">Один</section>
+			</div>
+			<div class="tab">
+				<input type="radio" id="tab2" name="tab-group">
+				<label for="tab2" class="tab-title">Вкладка 2</label>
+				<section class="tab-content">Два</section>
+			</div>
+			<div class="tab">
+				<input type="radio" id="tab3" name="tab-group">
+				<label for="tab3" class="tab-title">Вкладка 3</label>
+				<section class="tab-content">Три</section>
+			</div>
+		</div>
+	</div>
+	<!--<section class="tabs">
+		<div class="container">
+			<div class="tabs__item">
+				<input type="radio" id="tab1" name="tab-group" checked>
+				<label for="tab1" class="tabs__title">TAB 1</label>
+				<div class="tabs__content">
+					<div class="tabs__text">
+						<h3>Tabs with soft transitioning effect.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+							bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
+							justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+							penatibus et magnis dis parturient montes.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+							bibendum laoreet.</p>
+					</div>
+					<div class="tabs__image">
+						<img src="img/liberty.png" alt="Statue of liberty">
+					</div>
+				</div>
+			</div>
+			<div class="tabs__item">
+				<input type="radio" id="tab2" name="tab-group">
+				<label for="tab2" class="tabs__title">TAB 2</label>
+				<div class="tabs__content">
+					<div class="tabs__text">
+						<h3>Tabs with soft transitioning effect.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+							bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
+							justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+							penatibus et magnis dis parturient montes.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+							bibendum laoreet.</p>
+					</div>
+					<div class="tabs__image">
+						<img src="img/liberty.png" alt="Statue of liberty">
+					</div>
+				</div>
+			</div>
+			<div class="tabs__item">
+				<input type="radio" id="tab3" name="tab-group">
+				<label for="tab3" class="tabs__title">TAB 3</label>
+				<div class="tabs__content">
+					<div class="tabs__text">
+						<h3>Tabs with soft transitioning effect.</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+							bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra
+							justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque
+							penatibus et magnis dis parturient montes.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod
+							bibendum laoreet.</p>
+					</div>
+					<div class="tabs__image">
+						<img src="img/liberty.png" alt="Statue of liberty">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>-->
 	<section class="awesome">
 		<div class="container">
 			<div class="awesome__title title">
@@ -235,59 +313,53 @@
 			</div>
 			<div class="review__row">
 				<div class="review__column">
-					<div class="review__item">
-						<div class="review__text">
-							<p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit. Doloribus</span>
-								<span>accusamus expedita repellat
-									similique</span> <span>odio aspernatur ex, architecto eaque</span> <span>quo suscipit.</span>
-							</p>
+					<div class="review__text">
+						<p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit. Doloribus</span>
+							<span>accusamus expedita repellat
+								similique</span> <span>odio aspernatur ex, architecto eaque</span> <span>quo suscipit.</span>
+						</p>
+					</div>
+					<div class="review__person">
+						<div class="review__image">
+							<img src="img/person_1.png" alt="">
 						</div>
-						<div class="review__person">
-							<div class="review__image">
-								<img src="img/person_1.png" alt="">
-							</div>
-							<div class="review__about-person">
-								<p class="review__name">Davis Rhiel Madsen</p>
-								<p class="review__profession">Manager</p>
-							</div>
+						<div class="review__about-person">
+							<p class="review__name">Davis Rhiel Madsen</p>
+							<p class="review__profession">Manager</p>
 						</div>
 					</div>
 				</div>
 				<div class="review__column">
-					<div class="review__item">
-						<div class="review__text">
-							<p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit. Doloribus</span>
-								<span>accusamus expedita repellat
-									similique</span> <span>odio aspernatur ex, architecto eaque</span> <span>quo suscipit.</span>
-							</p>
+					<div class="review__text">
+						<p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit. Doloribus</span>
+							<span>accusamus expedita repellat
+								similique</span> <span>odio aspernatur ex, architecto eaque</span> <span>quo suscipit.</span>
+						</p>
+					</div>
+					<div class="review__person">
+						<div class="review__image">
+							<img src="img/person_2.png" alt="">
 						</div>
-						<div class="review__person">
-							<div class="review__image">
-								<img src="img/person_2.png" alt="">
-							</div>
-							<div class="review__about-person">
-								<p class="review__name">Jadon Rosser</p>
-								<p class="review__profession">Manager</p>
-							</div>
+						<div class="review__about-person">
+							<p class="review__name">Jadon Rosser</p>
+							<p class="review__profession">Manager</p>
 						</div>
 					</div>
 				</div>
 				<div class="review__column">
-					<div class="review__item">
-						<div class="review__text">
-							<p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit. Doloribus</span>
-								<span>accusamus expedita repellat
-									similique</span> <span>odio aspernatur ex, architecto eaque</span> <span>quo suscipit.</span>
-							</p>
+					<div class="review__text">
+						<p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing elit. Doloribus</span>
+							<span>accusamus expedita repellat
+								similique</span> <span>odio aspernatur ex, architecto eaque</span> <span>quo suscipit.</span>
+						</p>
+					</div>
+					<div class="review__person">
+						<div class="review__image">
+							<img src="img/person_3.png" alt="">
 						</div>
-						<div class="review__person">
-							<div class="review__image">
-								<img src="img/person_3.png" alt="">
-							</div>
-							<div class="review__about-person">
-								<p class="review__name">Cooper Dorwart</p>
-								<p class="review__profession">Manager</p>
-							</div>
+						<div class="review__about-person">
+							<p class="review__name">Cooper Dorwart</p>
+							<p class="review__profession">Manager</p>
 						</div>
 					</div>
 				</div>
@@ -304,7 +376,7 @@
 					<p>Use the sections you need, remove the ones you don't. Create gorgeous prototypes faster than ever!</p>
 				</div>
 			</div>
-			<div class="download__button btn">
+			<div class="download__button btn-a">
 				<a href="#">Download</a>
 			</div>
 		</div>
@@ -316,21 +388,24 @@
 				<p class="contact__subtitle subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			</div>
 			<form class="contact__form">
-				<fieldset class="contact__form_left">
-					<input type="text" placeholder="Name">
-					<input type="email" placeholder="Email">
-					<input type="password" placeholder="Password">
-				</fieldset>
-				<fieldset class="contact__form_right">
-					<textarea rows="1" placeholder="Message"></textarea>
-				</fieldset>
+				<div class="contact__fields">
+					<fieldset class="contact__fields_left">
+						<input type="text" placeholder="Name">
+						<input type="email" placeholder="Email">
+						<input type="password" placeholder="Password">
+					</fieldset>
+					<fieldset class="contact__fields_right">
+						<textarea rows="1" placeholder="Message"></textarea>
+					</fieldset>
+				</div>
+				<button class="contact__btn button">Send Message</button>
 			</form>
-			<button>Send Message</button>
+
 		</div>
 	</section>
 	<footer class="footer">
 		<div class="container">
-			<div class="footer__media">
+			<div class="footer__icons icons">
 				<div class="footer__item">
 					<a href="">
 						<img src="img/icon_1.svg" alt="">

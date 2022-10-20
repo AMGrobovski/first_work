@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 * {
@@ -121,7 +122,7 @@ body {
   font-size: 18px;
 }
 
-.btn {
+.btn-a {
   border: 2px solid #FFFFFF;
   display: inline-flex;
   justify-content: center;
@@ -130,39 +131,72 @@ body {
   font-size: 18px;
   line-height: 25px;
 }
-.btn:hover {
+.btn-a:hover {
   border: 2px solid #EC7979;
   transition: all 0.3s;
 }
-.btn:active {
+.btn-a:active {
   background: #AB4949;
   border: 2px solid #AB4949;
   transition: all 0.3s;
 }
-.btn a {
+.btn-a a {
   color: #ffffff;
   padding: 15px 100px;
 }
-.btn a:hover {
+.btn-a a:hover {
   color: #EC7979;
   transition: all 0.3s;
 }
-.btn a:active {
+.btn-a a:active {
   color: #ffffff;
   transition: all 0.3s;
+}
+
+.button {
+  display: inline-block;
+  background-color: #EC7979;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+}
+.button:hover {
+  background: #AB4949;
+  transition: all 0.5s ease;
+}
+.button:active {
+  background-color: #EC7979;
+  box-shadow: inset 0px 0px 10px #AB4949;
+  transition: all 0.5s ease;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons div {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+.icons div:last-child {
+  margin: 0;
 }
 
 .header {
   background-color: #000000;
 }
-.header__container {
-  width: 1200px;
-  margin: 0 auto;
-}
 .header__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header__logo {
+  margin-left: -55px;
 }
 .header__navigation {
   text-transform: capitalize;
@@ -276,25 +310,11 @@ body {
   margin-bottom: 0;
 }
 .main__form button {
-  display: inline-block;
   padding: 25px 0;
   position: absolute;
   bottom: 0;
   width: 470px;
-  background-color: #EC7979;
-  font-weight: 600;
-  font-size: 15px;
   line-height: 20px;
-  color: #ffffff;
-}
-.main__form button:hover {
-  background: #AB4949;
-  transition: all 0.5s ease;
-}
-.main__form button:active {
-  background-color: #EC7979;
-  box-shadow: inset 0px 0px 10px #AB4949;
-  transition: all 0.5s ease;
 }
 
 .social {
@@ -317,21 +337,61 @@ body {
   line-height: 21px;
   padding: 0 0 20px 0;
 }
-.social__icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.tabs {
+  position: relative;
+  /* Относительное позиционирование */
 }
-.social__item {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 30px;
+
+.tab,
+.tab-title {
+  display: inline-block;
+  /* Выстраиваем по горизонтали */
 }
-.social__item:last-child {
-  margin: 0;
+
+.tab input[type=radio] {
+  display: none;
+}
+
+.tab-title {
+  background: #ccc;
+  /* Цвет фона */
+  padding: 5px 10px;
+  /* Поля вокруг текста */
+  border: 1px solid #666;
+  /* Параметры рамки */
+  border-bottom: none;
+  /* Снизу линию убираем */
+}
+
+.tab-content {
+  position: absolute;
+  /* Абсолютное позиционирование */
+  border: 1px solid #666;
+  /* Параметры рамки */
+  padding: 10px;
+  /* Поля вокруг текста */
+  left: 0;
+  /* Размещаем у левого края */
+  width: calc(100% - 20px);
+  /* Ширина содержимого */
+  display: none;
+  /* Прячем вкладку */
+}
+
+.tab :checked + .tab-title {
+  position: relative;
+  /* Относительное позиционирование */
+  background: #fff;
+  /* Цвет фона */
+  top: 1px;
+  /* Сдвигаем вниз */
+  z-index: 1;
+  /* Отображаем поверх содержимого */
+}
+
+.tab :checked ~ .tab-content {
+  display: block;
+  /* Показываем активную вкладку */
 }
 
 .awesome {
@@ -431,11 +491,9 @@ body {
 }
 .review__row {
   display: flex;
+  justify-content: space-between;
 }
 .review__column {
-  flex: 0 1 33.333%;
-}
-.review__item {
   width: 370px;
 }
 .review__text {
@@ -504,21 +562,24 @@ body {
   background: #F5F5F5;
   padding: 50px 0 0 0;
 }
-.contact__form {
+.contact__fields {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   font-family: "Open Sans", sans-serif;
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
 }
-.contact__form_left {
-  width: 560px;
+.contact__fields_left {
+  flex-grow: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.contact__form_left input {
+.contact__fields_left input {
   display: block;
   background-color: #F5F5F5;
   border-bottom: 1px solid #BDBDBD;
@@ -527,22 +588,22 @@ body {
   padding-bottom: 16px;
   font-weight: 400;
 }
-.contact__form_left input:last-child {
+.contact__fields_left input:last-child {
   margin-bottom: 0;
 }
-.contact__form_left input::-moz-placeholder {
+.contact__fields_left input::-moz-placeholder {
   color: #BDBDBD;
 }
-.contact__form_left input:-ms-input-placeholder {
+.contact__fields_left input:-ms-input-placeholder {
   color: #BDBDBD;
 }
-.contact__form_left input::placeholder {
+.contact__fields_left input::placeholder {
   color: #BDBDBD;
 }
-.contact__form_right {
-  width: 560px;
+.contact__fields_right {
+  flex-grow: 1;
 }
-.contact__form_right textarea {
+.contact__fields_right textarea {
   resize: none;
   width: 100%;
   height: 100%;
@@ -551,56 +612,28 @@ body {
   border-bottom: 1px solid #BDBDBD;
   font-weight: 400;
 }
-.contact__form_right textarea::-moz-placeholder {
+.contact__fields_right textarea::-moz-placeholder {
   color: #BDBDBD;
 }
-.contact__form_right textarea:-ms-input-placeholder {
+.contact__fields_right textarea:-ms-input-placeholder {
   color: #BDBDBD;
 }
-.contact__form_right textarea::placeholder {
+.contact__fields_right textarea::placeholder {
   color: #BDBDBD;
 }
-.contact button {
-  display: inline-block;
+.contact__btn {
   padding: 22px 0;
   width: 370px;
-  background-color: #EC7979;
-  font-weight: 600;
-  font-size: 15px;
-  color: #ffffff;
   margin-bottom: 50px;
-}
-.contact button:hover {
-  background: #AB4949;
-  transition: all 0.5s ease;
-}
-.contact button:active {
-  background-color: #EC7979;
-  box-shadow: inset 0px 0px 10px #AB4949;
-  transition: all 0.5s ease;
 }
 
 .footer {
   text-align: center;
   background-color: #000000;
 }
-.footer__media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footer__icons {
   padding-top: 35px;
   margin-bottom: 27px;
-}
-.footer__item {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 30px;
-}
-.footer__item:last-child {
-  margin: 0;
 }
 .footer__copiright {
   padding-bottom: 27px;
