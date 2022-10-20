@@ -37,7 +37,7 @@ body {
 
 }
 
-.btn {
+.btn-a {
 	border: 2px solid #FFFFFF;
 	display: inline-flex;
 	justify-content: center;
@@ -69,6 +69,44 @@ body {
 		&:active {
 			color: #ffffff;
 			transition: all 0.3s;
+		}
+	}
+}
+
+.button {
+	display: inline-block;
+	background-color: #EC7979;
+	font-weight: 600;
+	font-size: 15px;
+	color: #ffffff;
+
+	&:hover {
+		background: #AB4949;
+		transition: all .5s ease;
+	}
+
+	&:active {
+		background-color: #EC7979;
+		box-shadow: inset 0px 0px 10px #AB4949;
+		transition: all .5s ease;
+	}
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	div {
+		width: 70px;
+		height: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 30px;
+
+		&:last-child {
+			margin: 0;
 		}
 	}
 }

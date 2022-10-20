@@ -31,7 +31,7 @@ body {
   font-size: 18px;
 }
 
-.btn {
+.btn-a {
   border: 2px solid #FFFFFF;
   display: inline-flex;
   justify-content: center;
@@ -40,24 +40,58 @@ body {
   font-size: 18px;
   line-height: 25px;
 }
-.btn:hover {
+.btn-a:hover {
   border: 2px solid #EC7979;
   transition: all 0.3s;
 }
-.btn:active {
+.btn-a:active {
   background: #AB4949;
   border: 2px solid #AB4949;
   transition: all 0.3s;
 }
-.btn a {
+.btn-a a {
   color: #ffffff;
   padding: 15px 100px;
 }
-.btn a:hover {
+.btn-a a:hover {
   color: #EC7979;
   transition: all 0.3s;
 }
-.btn a:active {
+.btn-a a:active {
   color: #ffffff;
   transition: all 0.3s;
+}
+
+.button {
+  display: inline-block;
+  background-color: #EC7979;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+}
+.button:hover {
+  background: #AB4949;
+  transition: all 0.5s ease;
+}
+.button:active {
+  background-color: #EC7979;
+  box-shadow: inset 0px 0px 10px #AB4949;
+  transition: all 0.5s ease;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons div {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+.icons div:last-child {
+  margin: 0;
 }
